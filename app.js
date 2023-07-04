@@ -1,5 +1,5 @@
 const express = require('express');
-//  Récupération du paquet express dans code avec require => récup dépendance dans node modules
+//  Récupération du paquet express dans code avec require 
 const bodyParser = require('body-parser');
 // pour récupèrer données au format json
 const sequelize = require('./src/db/sequelize');
@@ -12,12 +12,11 @@ const port = 3000 ;
 app.use(bodyParser.json());
 
 
-
 require('./src/routes/findAll')(app);
 require('./src/routes/findUser')(app);
 require('./src/routes/create')(app);
 require('./src/routes/deleteUser')(app);
-
+// routes pour les requêtes concernant la connexion admin
 
 
 app.listen(port, () => console.log(`Notre appli Node est démarrée sur : http://localhost: ${port}`));

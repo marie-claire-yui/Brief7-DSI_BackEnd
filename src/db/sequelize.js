@@ -12,11 +12,11 @@ const sequelize = new Sequelize('dsi_sensibilisation', 'root', 'password', {
   },
   logging: false
 })
-// Création d'une instance Sequelize avec les informations de connexion à la base de données
+// Création d'une instance Sequelize avec les informations de connexion à la base de données MySQL
 
 
 const User = UserModel(sequelize, DataTypes);
-// Création du modèle User en utilisant le modèle UserModel et les paramètres sequelize et DataTypes
+// Création du modèle User en utilisant le modèle UserModel et ses paramètres sequelize et DataTypes
 
 
 
