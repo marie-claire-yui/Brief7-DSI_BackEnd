@@ -4,7 +4,7 @@ const { Sequelize, DataTypes} = require('sequelize');
 const UserModel = require('../models/users');
 // Importation du modèle d'utilisateur (users.js)  
 
-const sequelize = new Sequelize('dsi_sensibilisation', 'root', 'password', {
+const sequelize = new Sequelize('dsi_sensibilisation', 'root', 'root', {
   host: 'localhost',
   dialect: 'mysql',
   dialectOptions: {
