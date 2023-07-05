@@ -11,5 +11,9 @@ module.exports = (app) => {
             res.json({ message, data: users});
             // Envoie une réponse JSON contenant le message et les données des utilisateurs récupérés.
         })
+        .catch( error => {
+            const message = `La liste des pokémons n'a pas pu être récupérée. Réessayez dans quelques instants.`
+            res.status(500).json({message, data: error})
+          })
     })
 }
