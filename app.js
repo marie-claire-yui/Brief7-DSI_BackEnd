@@ -16,6 +16,7 @@ require('./src/routes/findAll')(app);
 require('./src/routes/findUser')(app);
 require('./src/routes/create')(app);
 require('./src/routes/deleteUser')(app);
+require('./src/routes/updateUser')(app);
 // routes pour les requêtes concernant la connexion admin
 
 
