@@ -7,7 +7,7 @@ const sequelize = require('./src/db/sequelize');
 const app = express();
 // serveur web sur lequel fonctionnera notre API REST
 const port = 3000 ;
-// port sur lequel nous allons démarrer notre API REST par la suite
+// port sur lequel nous allons démarrer notre  API REST par la suite
 
 app.use(bodyParser.json());
 
