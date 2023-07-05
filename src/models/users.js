@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         autoIncrement: true
       },
-        //   la propriété define prend elle même 3 param, afin de mettre en place un nouveau models. Sequelize se base sur les models que nous déclarons pour construire les tables dans la bdd sql par la suite.
+        // la propriété define prend elle même 3 param, afin de mettre en place un nouveau models. Sequelize se base sur les models que nous déclarons pour construire les tables dans la bdd sql par la suite.
         // param: nom du models création de la table Pokemon (l2),avec un s par la suite. Puis, description du models, on décrit toutes les prop du modèle qui seront traduit en colonne dans la table. Pour chaque prop: un nom, un objt de config pour param le titre et le caracr obligatoire ou non de la prop. Le 3 ème param = est une option de param global. Facultatif pêrmet d'ajouter une config plus globale à notre model. Sequelize génère deux prop par défaut indépendamment des champs renseignés => createdAt date créa nouveau modèle et updatedAt date de modif d'une instance, mais l'on peut les modifier.
       role: {
         type: DataTypes.STRING,
