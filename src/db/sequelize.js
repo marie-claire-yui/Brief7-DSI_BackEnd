@@ -3,6 +3,9 @@ const { Sequelize, DataTypes} = require('sequelize');
 // récupération des prorpiétés de sequelize sequelize et dataypes
 const UserModel = require('../models/users');
 // Importation du modèle d'utilisateur (users.js)  
+// const bcrypt = require('bcrypt');
+
+
 
 const sequelize = new Sequelize('dsi_sensibilisation', 'root', 'root', {
   host: 'localhost',
@@ -19,6 +22,9 @@ const User = UserModel(sequelize, DataTypes);
 // Création du modèle User en utilisant le modèle UserModel et ses paramètres sequelize et DataTypes
 
 
+
+// bcrypt.hash('password', 10) 
+// .then(hash => User.create({ username: '', password: hash}))
 
 sequelize
   .query('SELECT 1')

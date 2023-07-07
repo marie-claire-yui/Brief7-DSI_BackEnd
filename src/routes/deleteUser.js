@@ -1,6 +1,8 @@
 const { User } = require('../db/sequelize');
+const auth = require("../auth/auth");
+ 
 module.exports = (app) => {
-  app.delete('/user_tests/:id', (req, res) => {
+  app.delete('/user_tests/:id',auth,  (req, res) => {
     User.findByPk(req.params.id).then((user) => {
       if (!user) {
         return res.status(404).json({ error: 'Utilisateur non trouvé.' });

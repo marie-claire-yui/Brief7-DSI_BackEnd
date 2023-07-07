@@ -1,7 +1,8 @@
 const { User } = require('../db/sequelize');
+const auth = require("../auth/auth");
 
 module.exports = (app) => {
-    app.get('/user_tests/:id', (req, res) => {
+    app.get('/user_tests/:id',auth, (req, res) => {
         User.findByPk(req.params.id)
         .then(users => {
             if(users === null){ //rq pour sequelize plus besoin de la méthode parseInt
