@@ -28,7 +28,7 @@ require('./src/routes/login')(app);
 
 
 // app.listen(port, () => console.log(`Notre appli Node est démarrée sur : http://localhost: ${port}`));
-// // démarre API REST sur port 3000
+// // démarre API REST sur port  3000 
 
 // Ce code met en place un serveur HTTPS avec les fichiers de certificat SSL et de clé privée spécifiés, et il écoute sur le port 3000 pour les requêtes entrantes.
 const key = fs.readFileSync(path.join(__dirname, 'certificate', 'server.key'));
