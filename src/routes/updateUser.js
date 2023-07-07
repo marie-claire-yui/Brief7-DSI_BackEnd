@@ -1,8 +1,9 @@
 const { User } = require('../db/sequelize')
 const { ValidationError, UniqueConstraintError } = require('sequelize') 
+const auth = require("../auth/auth");
 
 module.exports = (app) => {
-  app.put('/user_tests/:id', (req, res) => {
+  app.put('/user_tests/:id',auth, (req, res) => {
     const id = req.params.id
     
     User.update(req.body, { //28 méthode update est ce qui permet d'appliquer les modifications en base de données
